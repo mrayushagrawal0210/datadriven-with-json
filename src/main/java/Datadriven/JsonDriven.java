@@ -57,6 +57,7 @@ public class JsonDriven {
     @DataProvider(name = "dp")
     public String[] readjson() throws IOException, ParseException {
         JSONParser jsonParser = new JSONParser();
+        //There is some varibale need to be added so that 
 
         FileReader fileReader = new FileReader("src/Jsonfiles/testdata.json");
         Object obj = jsonParser.parse(fileReader);
@@ -71,6 +72,7 @@ public class JsonDriven {
             String password = (String) users.get("password");
 
             arr[i] = username+","+password;
+            system.out.println(arr[i]);//printing the whole string
         }
         return arr;
     }
